@@ -52,24 +52,28 @@ class MainPage extends Component {
       <div >
           <Header />
           <div className = "MainPage">
-          <input type="text" onKeyUp={this.search}/>
-          <button onClick={this.addNewUser}>Add User</button>
-          <div className="flex-item2">
-              <table className="Table">
-                <thead className="Table-row Table-header">
-                  <tr>
-                    <th>Sr no</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  { (searchKey === undefined || searchKey ==="") ? (userList.map((obj, i) => (<TableRow key={i} data={obj} />))) :  ( (filteredList=== undefined || filteredList.length === 0) ? (<EmptyTableRow msg={EmptyTableMsg}/>) : (filteredList.map((obj, i) => (<TableRow key={i} data={obj} />))) )}                
-                </tbody>
-              </table>
-          </div>
+            <div className="flex-container">
+              <div className="flex-item1">
+                <input type="text" onKeyUp={this.search} autoFocus placeholder="Search For User"/>
+                <button onClick={this.addNewUser}>Add User</button>
+              </div>
+              <div className="flex-item2">
+                <table className="Table">
+                  <thead className="">
+                    <tr>
+                      <th>Sr no</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Address</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    { (searchKey === undefined || searchKey ==="") ? (userList.map((obj, i) => (<TableRow key={i} data={obj} />))) :  ( (filteredList=== undefined || filteredList.length === 0) ? (<EmptyTableRow msg={EmptyTableMsg}/>) : (filteredList.map((obj, i) => (<TableRow key={i} data={obj} />))) )}                
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
       </div>
     );

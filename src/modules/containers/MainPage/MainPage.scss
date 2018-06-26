@@ -1,5 +1,61 @@
 .MainPage{
     width:100%;
     height: 100%;   
-    display: flex;    
+    display: flex;
+    .flex-container{
+        margin: 50px 39px;
+        width: 100%;
+
+        .flex-item1{
+            padding-bottom: 59px;
+            input{
+                height: 27px;
+                width: 315px;
+                float: left;
+                background-color: lightgoldenrodyellow;
+                padding-left: 10px;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            }
+
+            button{
+                height: 38px;
+                width: 128px;
+                flex-direction: inherit;
+                float: right;   
+                background-color: #4CAF50;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                color: white;
+                border: none;
+                font-weight: 600;
+            }
+        }
+
+        .flex-item2{
+            width: 100%;
+            .Table{
+                width: inherit;
+                text-align: center;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+
+                tr:nth-child(even){background-color: #f2f2f2;}
+                tr:hover {background-color: #ddd;}
+
+                th{
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                td{
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                }
+
+            }
+        }
+    }
 }

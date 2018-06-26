@@ -1,0 +1,46 @@
+.AddUser {
+  width: 100%;
+  height: 100%;
+  display: flex; }
+  .AddUser .flex-container {
+    margin: 50px 375px;
+    width: 45%; }
+    .AddUser .flex-container legend {
+      font-weight: 600; }
+    .AddUser .flex-container form {
+      margin: 22px; }
+      .AddUser .flex-container form .row {
+        display: flex;
+        padding: 10px; }
+        .AddUser .flex-container form .row .col-25 {
+          width: 25%; }
+        .AddUser .flex-container form .row .col-75 {
+          width: 75%; }
+          .AddUser .flex-container form .row .col-75 .inputBox {
+            width: 225px;
+            border: 2px solid lightgray;
+            padding: 7px; }
+          .AddUser .flex-container form .row .col-75 textarea {
+            border: 2px solid lightgray;
+            padding: 7px; }
+        .AddUser .flex-container form .row .submit {
+          height: 38px;
+          width: 128px;
+          flex-direction: inherit;
+          background-color: #4CAF50;
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          color: white;
+          border: none;
+          font-weight: 600;
+          margin-right: 13px; }
+        .AddUser .flex-container form .row .btn_home {
+          height: 38px;
+          width: 128px;
+          flex-direction: inherit;
+          background-color: lightgrey;
+          font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+          color: black;
+          border: none;
+          font-weight: 600; }
+      .AddUser .flex-container form .btn__position {
+        flex-direction: row-reverse; }
