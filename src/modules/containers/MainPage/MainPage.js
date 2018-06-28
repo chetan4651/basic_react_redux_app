@@ -39,7 +39,11 @@ class MainPage extends Component {
   addNewUser = () =>{
      this.setState({redirectFlag:true, redirectUrl:"/addUser"});
   }
-  
+
+  getComments = () =>{
+    this.setState({redirectFlag:true, redirectUrl:"/comments"});
+  }
+
   render() {
     const {userList,searchKey,filteredList} = this.props;
     const EmptyTableMsg = "Records Not Found";
@@ -56,6 +60,7 @@ class MainPage extends Component {
               <div className="flex-item1">
                 <input type="text" onKeyUp={this.search} autoFocus placeholder="Search For User"/>
                 <button onClick={this.addNewUser}>Add User</button>
+                <button className="commentsBtn" onClick={this.getComments}>Comments Section</button>
               </div>
               <div className="flex-item2">
                 <table className="Table">

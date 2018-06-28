@@ -24,6 +24,8 @@
         color: white;
         border: none;
         font-weight: 600; }
+      .MainPage .flex-container .flex-item1 .commentsBtn {
+        margin-right: 10px; }
     .MainPage .flex-container .flex-item2 {
       width: 100%; }
       .MainPage .flex-container .flex-item2 .Table {

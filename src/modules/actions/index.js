@@ -10,3 +10,7 @@ export const GET_FILTER_LIST = (searchKey,filteredList) =>({
   searchKey
 });
   
+export const GET_ALL_COMMENTS = (CommentList) => ({
+  type: 'GET_ALL_COMMENTS',    
+  CommentList
+});

@@ -1,0 +1,18 @@
+*{
+    color:black;
+    background:none;
+}
+
+.active{
+    color:red;
+    background-color: yellow;
+}
+
+.pagination{
+    display: inline-flex;
+    list-style-type: none;
+
+    li{
+        margin-right: 10px;
+    }
+}
