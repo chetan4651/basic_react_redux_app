@@ -26,7 +26,7 @@ class CommentList extends Component {
       axios.get("https://jsonplaceholder.typicode.com/comments")
       .then(res => {
         if(this.state.totalCnt == 0){
-          const len = res.data.length/this.state.pageCount;
+          const len = Math.ceil(res.data.length/this.state.pageCount);
           this.setState({totalCnt:len});
         }
 
@@ -114,7 +114,7 @@ const mapDispatchToProps = (dispatch) =>  {
           if(list.length > 0){
             for(var k=offset;k<list.length;k++){
               if( k >= list.length)
-                break;
+                break; 
 
               if(cnt < 10){
                 newList.push(list[k]);
