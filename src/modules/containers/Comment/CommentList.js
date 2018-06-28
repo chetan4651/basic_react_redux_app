@@ -111,11 +111,8 @@ const mapDispatchToProps = (dispatch) =>  {
           var newList = [];
          
           var cnt=0;
-          if(list.length > 0){
+          if(list.length > 0 && offset < list.length){
             for(var k=offset;k<list.length;k++){
-              if( k >= list.length)
-                break; 
-
               if(cnt < 10){
                 newList.push(list[k]);
               }
