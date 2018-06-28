@@ -39,6 +39,9 @@ class CommentList extends Component {
 
   handlePageClick = (data) => {    
     var selectedOffset = data.selected;
+    if(selectedOffset === undefined || selectedOffset ==="")
+      selectedOffset = 0;
+
     this.getUsers(selectedOffset*this.state.pageCount);
   };
  
@@ -108,12 +111,17 @@ const mapDispatchToProps = (dispatch) =>  {
           var newList = [];
          
           var cnt=0;
-          for(var k=offset;k<list.length;k++){
-            if(cnt < 10){
-              newList.push(list[k]);
-            }
+          if(list.length > 0){
+            for(var k=offset;k<list.length;k++){
+              if( k >= list.length)
+                break;
 
-            cnt++;
+              if(cnt < 10){
+                newList.push(list[k]);
+              }
+
+              cnt++;
+            }
           }
           dispatch(GET_ALL_COMMENTS(newList));
         }
